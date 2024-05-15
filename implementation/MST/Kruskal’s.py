@@ -47,6 +47,12 @@ def kruskals(G):
     for edge in edges:
         cost, n1, n2 = edge[0], edge[1], edge[2]
 
+        # check if two vertices belong to the same Set/Tree or not 
+
+        # if not then union (unite ) two sets 
+        # union done to the largest set 
+        # after this add this edge to MST 
+
         if not uf.issame(conv_char(n1), conv_char(n2)):
             total_cost += cost
             uf.unite(conv_char(n1), conv_char(n2))
@@ -56,7 +62,9 @@ def kruskals(G):
 
 
 def main():
+
     G = make_graph()
+    
     MST, total_cost = kruskals(G)
 
     print(f'Minimum spanning tree: {MST}')
