@@ -42,3 +42,12 @@ def partition(alist,first,last):
 alist = [54,26,93,17,77,31,44,55,20]
 quickSort(alist)
 print(alist)
+"""
+Time Complexity:
+  - Average: O(n log n)
+  - Worst: O(n^2) (occurs when pivot consistently partitions the array very unevenly)
+
+Space Complexity:
+  - O(log n) (due to recursion) in average and best cases, 
+  O(n) in worst case (recursive calls stack can grow proportionally to input size)
+"""
