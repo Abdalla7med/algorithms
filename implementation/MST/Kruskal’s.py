@@ -1,7 +1,9 @@
 # go to ../DisjiontSet/Implementation.py 
 # thus, becaue we will use Disjoint set 
-# to perform unionfind operation 
-# pip install unionfind
+
+# to perform unionfind operation
+ 
+# pip install unionfind in the termial 
 # and then import
 from unionfind import unionfind
 
