@@ -12,6 +12,7 @@ def parent(i):
     return i//2
 
 
+# O(log n)
 def max_heapify(a, heap_size, i):
     l = left(i)
     r = right(i)
@@ -44,7 +45,7 @@ def Max_heapify(self,i):
             right= 2*i+2
 """
 
-
+# O(n)
 def build_max_heap(a):
     heap_size = len(a)
 
@@ -52,10 +53,11 @@ def build_max_heap(a):
     for i in range(heap_size//2, 0, -1):
         max_heapify(a, heap_size, i)
 
-
+# O (n lgn)
 def heap_sort(a):
-    build_max_heap(a)
+    build_max_heap(a) # O(n)
 
+    # start from the end 
     for i in range(len(a)-1, 1, -1):
         # swap elements
         a[i], a[1] = a[1], a[i]
@@ -66,7 +68,7 @@ def heap_sort(a):
         max_heapify(a, i, 1) # pass i as size instead of modify list by pop last element 
         # just simulate that the last element is been deleted 
 
-
+# T(n)= O(n lgn )+ O(n) = max(O(n lgn ), O(n)) => O(n lgn)
 def main():
     
     # the root is at Index one not zero 
